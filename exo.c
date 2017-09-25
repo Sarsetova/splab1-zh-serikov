@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	
 	int c;
-	if ((c = getopt (argc, argv, "n:")) != -1) {
+	if ((c = getopt (argc, argv, "n:")) != -1) {  // if  there is option -n
 		switch(c) {
 			case 'n':
 				for (int i = 2; i < argc ; i++)
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 				break;
 		}
 	}
-	else {
+	else { // if no option -n
 		for (int i = 1; i < argc ; i++)
 		{
 			printf("%s ", argv[i]);
